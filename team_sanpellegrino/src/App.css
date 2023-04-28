@@ -12,7 +12,7 @@
   padding: 10px 10px;
 }
 .center {
-  text-align: -webkit-center;
+  text-align: -webkit-center !important;
   text-align: center;
 }
 .logo {
