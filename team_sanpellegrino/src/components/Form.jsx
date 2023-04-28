@@ -4,6 +4,7 @@ function Form() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [location, setLocation] = useState("");
+  const [backgroundColor, setBackgroundColor] = useState('')
 
   const fetchWeatherData = async (event) => {
     event.preventDefault();
@@ -68,7 +69,7 @@ function Form() {
             <td>
               {item.aqi >= 0 && item.aqi <= 50 ? (
                 "Good"
-              ) : item.aqi >= 51 && item.aqi <= 100 ? (
+              ) &&  : item.aqi >= 51 && item.aqi <= 100 ? (
                 "Moderate"
               ) : item.aqi >= 101 && item.aqi <= 150 ? (
                 "Bad"
