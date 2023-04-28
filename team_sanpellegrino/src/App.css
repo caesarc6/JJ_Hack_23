@@ -4,7 +4,13 @@
   /* padding: 2rem; */
   text-align: center;
 }
-
+/* centering input bar */
+#form_location {
+  padding: 30px 0px 30px 0px;
+}
+.location_input_bar {
+  padding: 10px 10px;
+}
 .center {
   text-align: -webkit-center;
   text-align: center;
