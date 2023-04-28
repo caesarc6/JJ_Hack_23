@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function WeatherDisplay({ city }) {
+function fetchWeatherData({ city }) {
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(null)
     

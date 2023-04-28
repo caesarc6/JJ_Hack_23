@@ -1,13 +1,20 @@
 import React from "react"
 
 function Form() {
-    const handleSubmit = (e) => {
-    
+    const fetchWeatherData = async () => {
+        try {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`;
+            const response = await fetch(url);
+            const data = await response.json();
+            setWeatherData(data);
+          } catch (error) {
+            setError(error);
+          }
     }
 
   return (
     <div>
-      <form id="form_location" onSubmit={handleSubmit}>
+      <form id="form_location">
         <input
           name="location_input"
           type="text"
@@ -15,7 +22,7 @@ function Form() {
           placeholder="Enter a location"
           className="location_input_bar"
         />
-        <button type="submit" id="submit-btn" form="form_location">
+        <button onClick={fetchWeatherData()} type="submit" id="submit-btn" form="form_location">
           Get Weather
         </button>
       </form>
