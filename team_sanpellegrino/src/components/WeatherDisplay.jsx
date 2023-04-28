@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 function fetchWeatherData({ city }) {
-    const [weatherData, setWeatherData] = useState(null)
-    const [error, setError] = useState(null)
-    
-
+  const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -13,6 +11,7 @@ function fetchWeatherData({ city }) {
         const response = await fetch(url);
         const data = await response.json();
         setWeatherData(data);
+        console.log({ weatherData });
       } catch (error) {
         setError(error);
       }
