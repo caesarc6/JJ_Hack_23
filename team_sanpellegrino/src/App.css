@@ -50,3 +50,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.positive-bg {
+  background: #a7c957;
+}
+
+.negative-bg {
+  background: #c1121f;
+}
