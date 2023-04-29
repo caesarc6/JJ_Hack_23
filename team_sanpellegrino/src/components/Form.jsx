@@ -45,7 +45,8 @@ function Form() {
   }
 
   const city = weatherData.city_name;
-  const countryCode = weatherData.country_code;
+  const countryCode = weatherDat
+  a.country_code;
 
   const weatherTable = (
     <div className="center">
