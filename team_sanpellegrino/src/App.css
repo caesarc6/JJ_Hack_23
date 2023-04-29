@@ -74,3 +74,12 @@
   padding: 10px;
   text-align: center;
 }
+
+.learn-more-page-container p, li {
+  text-align: start;
+  margin-left: 3em;
+}
+
+.learn-more-page-container {
+  background-image: url('./assets/learn-more-bg.jpg')
+}
