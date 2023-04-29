@@ -4,7 +4,7 @@ function Form() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [location, setLocation] = useState("");
-  const [backgroundColor, setBackgroundColor] = useState('')
+  const [backgroundColor, setBackgroundColor] = useState("");
 
   const fetchWeatherData = async (event) => {
     event.preventDefault();
@@ -45,8 +45,7 @@ function Form() {
   }
 
   const city = weatherData.city_name;
-  const countryCode = weatherDat
-  a.country_code;
+  const countryCode = weatherData.country_code;
 
   const weatherTable = (
     <div className="center">
@@ -58,29 +57,29 @@ function Form() {
           <p>PM10: {item.pm10}</p>
           <p>O3: {item.o3}</p>
           <p>
-          Quality Status:{" "}
-  {item.aqi >= 0 && item.aqi <= 50 ? (
-    <span style={{ color: "green" }}>
-      Good - It is safe for you to travel outside today!
-    </span>
-  ) : item.aqi >= 51 && item.aqi <= 100 ? (
-    <span style={{ color: "yellow" }}>
-      Moderate - Please take extra caution traveling, stay indoor if possible.
-    </span>
-  ) : item.aqi >= 101 && item.aqi <= 150 ? (
-    <span style={{ color: "red" }}>
-      Bad - Please do not leave the house, you will quite literally die.
-    </span>
-  ) : (
-    ""
-  )}
-</p>
-
+            Quality Status:{" "}
+            {item.aqi >= 0 && item.aqi <= 50 ? (
+              <span style={{ color: "green" }}>
+                Good - It is safe for you to travel outside today!
+              </span>
+            ) : item.aqi >= 51 && item.aqi <= 100 ? (
+              <span style={{ color: "yellow" }}>
+                Moderate - Please take extra caution traveling, stay indoor if
+                possible.
+              </span>
+            ) : item.aqi >= 101 && item.aqi <= 150 ? (
+              <span style={{ color: "red" }}>
+                Bad - Please do not leave the house, you will quite literally
+                die.
+              </span>
+            ) : (
+              ""
+            )}
+          </p>
         </div>
       ))}
     </div>
   );
-  
 
   return (
     <div className="center">
@@ -96,7 +95,9 @@ function Form() {
           Get Weather
         </button>
       </form>
-      <h2>{city}, {countryCode}</h2>
+      <h2>
+        {city}, {countryCode}
+      </h2>
       {weatherTable}
     </div>
   );
