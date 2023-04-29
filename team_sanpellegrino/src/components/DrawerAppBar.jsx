@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Outlet, Link } from "react-router-dom";
 
 const pages = ["Learn More", "Solutions", "Resources"];
 
@@ -78,11 +79,26 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              <MenuItem /* key={page} */ onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link to="/LearnMore"> Learn More</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem /* key={page} */ onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link to="/Resources"> Resources</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem /* key={page} */ onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link to="/Solutions"> Solutions</Link>
+                </Typography>
+              </MenuItem>
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -102,7 +118,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            Clear Air
+            <Link to="/">Clear Air</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
