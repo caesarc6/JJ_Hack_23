@@ -48,37 +48,38 @@ function Form() {
   const countryCode = weatherData.country_code;
 
   const weatherTable = (
-    <table className="center">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Air Quality</th>
-          <th>PM2.5</th>
-          <th>PM10</th>
-          <th>O3</th>
-        </tr>
-      </thead>
-      <tbody>
-        {weatherData.data.map((item) => (
-          <tr key={item.ts}>
-            <td>{item.datetime}</td>
-            <td>{item.aqi}</td>
-            <td>{item.pm2_5}</td>
-            <td>{item.pm10}</td>
-            <td>{item.o3}</td>
-            <td>
-              {
-                item.aqi >= 0 && item.aqi <= 50 ? ("Good"): 
-                item.aqi >= 51 && item.aqi <= 100 ? ("Moderate"): 
-                item.aqi >= 101 && item.aqi <= 150 ? ("Bad"): 
-                ("")
-              }
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="center">
+      {weatherData.data.map((item) => (
+        <div key={item.ts} className="data-box">
+          <h3>{item.datetime}</h3>
+          <p>Air Quality: {item.aqi}</p>
+          <p>PM2.5: {item.pm2_5}</p>
+          <p>PM10: {item.pm10}</p>
+          <p>O3: {item.o3}</p>
+          <p>
+          Quality Status:{" "}
+  {item.aqi >= 0 && item.aqi <= 50 ? (
+    <span style={{ color: "green" }}>
+      Good - It is safe for you to travel outside today!
+    </span>
+  ) : item.aqi >= 51 && item.aqi <= 100 ? (
+    <span style={{ color: "yellow" }}>
+      Moderate - Please take extra caution traveling, stay indoor if possible.
+    </span>
+  ) : item.aqi >= 101 && item.aqi <= 150 ? (
+    <span style={{ color: "red" }}>
+      Bad - Please do not leave the house, you will quite literally die.
+    </span>
+  ) : (
+    ""
+  )}
+</p>
+
+        </div>
+      ))}
+    </div>
   );
+  
 
   return (
     <div className="center">
@@ -101,4 +102,3 @@ function Form() {
 }
 
 export default Form;
-
