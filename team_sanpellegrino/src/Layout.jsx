@@ -7,9 +7,9 @@ import Form from "./components/Form";
 const Layout = () => {
   return (
     <>
-      <Link to="/LearnMore"> Learn More</Link>
+      {/* <Link to="/LearnMore"> Learn More</Link>
       <Link to="/Resources"> Resources</Link>
-      <Link to="/Solutions"> Solutions</Link>
+      <Link to="/Solutions"> Solutions</Link> */}
       <DrawerAppBar />
       <Intro />
       <Form />
