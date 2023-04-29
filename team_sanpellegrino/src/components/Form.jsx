@@ -49,7 +49,7 @@ function Form() {
 
   const weatherTable = (
     <div className="center">
-      {weatherData.data.map((item) => (
+      {weatherData.data.slice(0, 2).map((item) => (
         <div key={item.ts} className="data-box">
           <h3>{item.datetime}</h3>
           <p>Air Quality: {item.aqi}</p>
