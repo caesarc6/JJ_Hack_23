@@ -1,6 +1,6 @@
 import "./App.css";
 import DrawerAppBar from "./components/DrawerAppBar";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Intro from "./components/Intro";
 import Form from "./components/Form";
 
