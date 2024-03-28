@@ -4,7 +4,7 @@ function LearnMore() {
     return(
         <div class="learn-more-page-container">
             <h1>Learn More: The Health and Climate Impacts</h1>
-            <h3>Today, we start a change. The air we breathe impacts our health and environment.</h3>
+            <h3>The air we breathe impacts our health and environment.</h3>
             <div>
                 <div>
                     <h2>Health Impact</h2>
