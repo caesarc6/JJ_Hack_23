@@ -4,7 +4,7 @@ function Solutions() {
     return(
         <div className='data-box2' style={{ textAlign: 'center' }}>
             <h1>Solutions you can take!</h1>
-            <p contentEditable style={{ fontFamily: 'Arial', margin: '100px auto' }}>
+            <p>
                 <h3>Take a bike ride! Or save money on that Uber and just take public transportation! Or restrict
                 on anything that has to do with transportation of goods.Transportation is the largest
                 source of greenhouse gasses, so maybe order less Amazon prime boxes and go to store!</h3>
