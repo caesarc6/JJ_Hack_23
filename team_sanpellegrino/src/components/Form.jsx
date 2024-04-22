@@ -6,12 +6,15 @@ function Form() {
   const [location, setLocation] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("");
 
+  //import weather api key from .env file
+  const apiKey = "4557cd8c282f4b10b46f50087026731b";
+
   const fetchWeatherData = async (event) => {
     event.preventDefault();
 
     try {
       const locationInput = event.target.location_input.value;
-      const url = `https://api.weatherbit.io/v2.0/forecast/airquality?&postal_code=${locationInput}&key=3140a681d3b34703bdbe0d30c8ddab50`;
+      const url = `https://api.weatherbit.io/v2.0/current?&postal_code=${locationInput}&key=${apiKey}`;
       const response = await fetch(url);
       const data = await response.json();
       setWeatherData(data);
@@ -44,18 +47,18 @@ function Form() {
     );
   }
 
-  const city = weatherData.city_name;
-  const countryCode = weatherData.country_code;
-
   const weatherTable = (
     <div className="center">
       {weatherData.data.slice(0, 2).map((item) => (
         <div key={item.ts} className="data-box">
-          <h3>{item.datetime}</h3>
+          <h3>
+            {item.state_code}, {item.city_name}
+          </h3>
           <p>Air Quality: {item.aqi}</p>
           <p>PM2.5: {item.pm2_5}</p>
           <p>PM10: {item.pm10}</p>
           <p>O3: {item.o3}</p>
+          <h5>{item.ob_time}</h5>
           <p>
             Quality Status:{" "}
             {item.aqi >= 0 && item.aqi <= 50 ? (
@@ -76,6 +79,7 @@ function Form() {
               ""
             )}
           </p>
+          <image src={item.weather.icon} alt="weather icon" />
         </div>
       ))}
     </div>
@@ -95,9 +99,6 @@ function Form() {
           Get Weather
         </button>
       </form>
-      <h2>
-        {city}, {countryCode}
-      </h2>
       {weatherTable}
     </div>
   );
