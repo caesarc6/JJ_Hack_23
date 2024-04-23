@@ -1,6 +1,6 @@
-# CleanAir App
+# ClearAir 
 ## Overview
-CleanAir is a web application designed to raise awareness about air quality and promote eco-friendly habits. Developed during a 2023 hackathon, CleanAir obtained second place for its innovative approach and impactful presentation. The application allows users to check real-time air quality and temperature by entering a ZIP code. It also provides educational pages that suggest sustainable practices like cycling to work and recycling to help reduce carbon emissions.
+ClearAir is a web application designed to raise awareness about air quality and promote eco-friendly habits. Developed during a 2023 hackathon, ClearAir obtained second place for its innovative approach and impactful presentation. The application allows users to check real-time air quality and temperature by entering a ZIP code. It also provides educational pages that suggest sustainable practices like cycling to work and recycling to help reduce carbon emissions.
 
 ## Features
 * **Air Quality Check**: Users can enter a ZIP code and view the current Air Quality Index (AQI) and temperature of the location.
@@ -8,7 +8,7 @@ CleanAir is a web application designed to raise awareness about air quality and 
 * **Responsive Design**: Ensures a seamless experience across all device types.
 
 ## Technologies
-CleanAir is built using a modern tech stack to ensure high performance and ease of maintenance:
+ClearAir is built using a modern tech stack to ensure high performance and ease of maintenance:
 
 * **Vite.js**: A modern, fast front-end build tool.
 * **React**: Used for building the user interface with efficient updates and rendering.
