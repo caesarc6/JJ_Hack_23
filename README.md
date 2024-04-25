@@ -20,7 +20,8 @@ ClearAir is built using a modern tech stack to ensure high performance and ease 
 Ensure you have the following installed:
 
 * Node.js
-* npm or yarn
+* NPM or Yarn
+* WeahterBit.io API key (Just create an account to gain an API key.)
 
 # Installation
 
