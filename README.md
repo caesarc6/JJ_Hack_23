@@ -1,6 +1,14 @@
-# ClearAir 
+# ClearAir
+
 ## Overview
+
 ClearAir is a web application designed to raise awareness about air quality and promote eco-friendly habits. Developed during a 2023 hackathon, ClearAir obtained second place for its innovative approach and impactful presentation. The application allows users to check real-time air quality and temperature by entering a ZIP code. It also provides educational pages that suggest sustainable practices like cycling to work and recycling to help reduce carbon emissions.
+
+<div align="center">
+  <a rel="nofollow">
+    <img width="33%" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc21lODg4M3d5MDRncXdwcjZtZGxtODg4ZWtjeXZ0b25oYWRuNThuOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VnLxDSvdlblBgmvL4P/giphy.gif">
+  </a>
+</div>
 
 ## Features
 * **Air Quality Check**: Users can enter a ZIP code and view the current Air Quality Index (AQI) and temperature of the location.
