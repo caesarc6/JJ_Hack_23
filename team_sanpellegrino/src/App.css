@@ -55,7 +55,7 @@
   background: #a7c957;
 }
 
-.moderate-bg{
+.moderate-bg {
   background: #f0b904;
 }
 
@@ -87,11 +87,13 @@
   text-align: center;
 }
 
-.learn-more-page-container p, li {
+.learn-more-page-container p,
+li {
   text-align: start;
   margin-left: 3em;
 }
 
 .learn-more-page-container {
-  background-image: url('./assets/learn-more-bg.jpg')
+  background-image: url("./assets/learn-more-bg.jpg");
+  background-size: cover;
 }

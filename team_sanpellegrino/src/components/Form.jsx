@@ -7,7 +7,7 @@ function Form() {
   const [backgroundColor, setBackgroundColor] = useState("");
 
   //import weather api key from .env file
-  const apiKey = "4557cd8c282f4b10b46f50087026731b";
+  const apiKey = "API_KEY_HERE";
 
   const fetchWeatherData = async (event) => {
     event.preventDefault();
@@ -49,12 +49,19 @@ function Form() {
 
   const weatherTable = (
     <div className="center">
-      {weatherData.data.slice(0, 2).map((item) => (
+      {weatherData.data.slice(0, 22).map((item) => (
         <div key={item.ts} className="data-box">
           <h3>
             {item.state_code}, {item.city_name}
+            <p>Temperature: {(item.temp * 9) / 5 + 32} °F</p>
+            <img
+              height="50"
+              width="50"
+              src={`https://cdn.weatherbit.io/static/img/icons/${item.weather.icon}.png`}
+              alt="Weather Icon"
+            />
           </h3>
-          <p>Air Quality: {item.aqi}</p>
+          <p>Air Quality Index: {item.aqi}</p>
           <p>PM2.5: {item.pm2_5}</p>
           <p>PM10: {item.pm10}</p>
           <p>O3: {item.o3}</p>
@@ -100,6 +107,10 @@ function Form() {
         </button>
       </form>
       {weatherTable}
+      <p>
+        (PM2.5, PM10, and O3 are not available because the free API key does not
+        provide this information.)
+      </p>
     </div>
   );
 }

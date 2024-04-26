@@ -125,19 +125,25 @@ function ResponsiveAppBar() {
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <Link to="/LearnMore">Learn More</Link>
+              <Link style={{ padding: "24px 15px" }} to="/LearnMore">
+                Learn More
+              </Link>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <Link to="/Resources">Resources</Link>
+              <Link style={{ padding: "24px 15px" }} to="/Solutions">
+                Solutions
+              </Link>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <Link to="/Solutions">Solutions</Link>
+              <Link style={{ padding: "24px 15px" }} to="/Resources">
+                Resources
+              </Link>
             </Button>
           </Box>
         </Toolbar>
